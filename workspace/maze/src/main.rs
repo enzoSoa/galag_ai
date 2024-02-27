@@ -3,7 +3,7 @@ pub mod maze;
 use maze::Maze;
 
 fn main() {
-    let _maze = Maze::from_char_pattern(vec![
+    let maze = Maze::from_char_pattern(vec![
         vec!['X', 'S', 'X', 'X', 'X', 'X', 'X', 'X', 'X'],
         vec!['X', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'X'],
         vec!['X', 'O', 'X', 'O', 'O', 'X', 'X', 'O', 'X'],
@@ -14,4 +14,6 @@ fn main() {
         vec!['X', 'O', 'O', 'O', 'X', 'O', 'O', 'O', 'X'],
         vec!['X', 'X', 'X', 'X', 'X', 'X', 'X', 'E', 'X'],
     ]);
+
+    print!("{}", maze);
 }

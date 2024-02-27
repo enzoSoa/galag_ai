@@ -1,3 +1,5 @@
+use core::fmt;
+
 pub enum Tile {
     WALL,
     FLOUR,
@@ -6,7 +8,7 @@ pub enum Tile {
 }
 
 impl Tile {
-    pub fn from_char(character: char) -> Self {
+    pub fn from_char(character: &char) -> Self {
         match character {
             'X' => Tile::WALL,
             'O' => Tile::FLOUR,
@@ -22,5 +24,20 @@ impl Tile {
                 "
             ),
         }
+    }
+
+    pub fn to_char(&self) -> char {
+        match self {
+            Tile::WALL => 'X',
+            Tile::FLOUR => 'O',
+            Tile::START => 'S',
+            Tile::END => 'E',
+        }
+    }
+}
+
+impl fmt::Display for Tile {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{}", self.to_char())
     }
 }
