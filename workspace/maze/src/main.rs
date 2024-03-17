@@ -1,9 +1,10 @@
-pub mod maze;
+pub mod agent;
+pub mod map;
 
-use maze::Maze;
+use map::Map;
 
 fn main() {
-    let maze = Maze::from_char_pattern(vec![
+    let maze = Map::from_char_pattern(vec![
         vec!['X', 'S', 'X', 'X', 'X', 'X', 'X', 'X', 'X'],
         vec!['X', 'O', 'X', 'O', 'O', 'O', 'O', 'O', 'X'],
         vec!['X', 'O', 'X', 'O', 'O', 'X', 'X', 'O', 'X'],

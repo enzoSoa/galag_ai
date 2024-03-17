@@ -1,6 +1,6 @@
 use core::fmt;
 
-use crate::maze::tile::Tile;
+use crate::map::tile::Tile;
 
 pub struct Row(Vec<Tile>);
 
