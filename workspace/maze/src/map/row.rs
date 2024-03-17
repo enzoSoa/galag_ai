@@ -16,7 +16,7 @@ impl Row {
     pub fn to_string(&self) -> String {
         self.0
             .iter()
-            .fold(String::new(), |acc, tile| format!("{acc} {tile}"))
+            .fold(String::new(), |acc, tile| format!("{acc}{tile} "))
     }
 }
 
